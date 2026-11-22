@@ -55,8 +55,23 @@ from the build.
 
 - Command: `node cli/makefun.mjs check --kit <kit> --repo <entry>`
   (no --transcripts: no bundle could be written from this session, see
-  Transcripts below).
-- Result: **(filled in after the run below)**.
+  Transcripts below), run 2026-11-22 ~08:08 WIB.
+- Result: **4 passed, 1 failed, 14 skipped, 5 at submission** —
+  `not ready: fix transcripts_present, then check again`.
+- Passes: competition_open (now between opening 2026-11-22T00:00:00Z and
+  deadline 2026-11-24T00:00:00Z), snapshot (8 files, 401,349 bytes, within
+  the intake's caps), license_osi (SPDX-License-Identifier: MIT,
+  OSI-approved), entrypoint (main.ts, node22).
+- The one failure, transcripts_present, is structural to this subagent run
+  and expected: no bundle can be sealed from this session (see Transcripts).
+  Nothing needs rebuilding.
+- Local HEAD `ee083671ffe1c4b623339a7726d970682cac6fd4` (1 commit, 8 files);
+  GitHub HEAD `c6344e7d1a820df15cc6b24f6f1f8ae6f691c10c` (confirmed by
+  get-ref after the push; see below). The local commit is NOT in the repo —
+  files went up via the Contents API, one commit per file — but the trees
+  are identical: all 8 files byte-identical, verified by downloading each
+  file from raw.githubusercontent.com and comparing sha256 with local (all
+  MATCH). SUBMIT THE GITHUB HEAD, not the local commit.
 - NOTE on the "Entry tree ≤8192 bytes" line: that cap does not apply to this
   competition. The kit's own check reports the snapshot "within the intake's
   caps" (each file at most 100 MiB, repository at most 512 MiB), the
