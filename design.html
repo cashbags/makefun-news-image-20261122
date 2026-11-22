@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The Sunday World — 22 November 2026</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #e8e2d2; }
+  .sheet {
+    width: 1024px; height: 1024px; margin: 0 auto;
+    background: #f8f3e6; color: #17130c;
+    font-family: Georgia, 'Times New Roman', serif;
+    padding: 10px 18px 8px; overflow: hidden;
+  }
+  .sans { font-family: 'DejaVu Sans', Arial, sans-serif; }
+  .rule { border: 0; border-top: 2px solid #17130c; margin: 5px 0; }
+  .thin { border: 0; border-top: 1px solid #17130c; margin: 5px 0; }
+
+  /* ---- masthead ---- */
+  .mast-top {
+    display: flex; justify-content: space-between;
+    font-family: 'DejaVu Sans', Arial, sans-serif;
+    font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: #5a5344;
+  }
+  .mast h1 {
+    text-align: center; font-size: 52px; line-height: 1; font-weight: 900;
+    letter-spacing: 1px; margin: 2px 0 1px;
+  }
+  .mast h1 em { font-style: normal; color: #9c1f1f; }
+  .mast-sub {
+    text-align: center; font-size: 12.5px; letter-spacing: 0.4px; color: #2b271e;
+  }
+  .mast-sub b { color: #9c1f1f; }
+
+  /* ---- black date band ---- */
+  .dateband {
+    background: #17130c; color: #f8f3e6; text-align: center;
+    font-family: 'DejaVu Sans', Arial, sans-serif;
+    font-size: 13px; font-weight: 700; letter-spacing: 2.5px;
+    padding: 4px 0; margin: 7px 0 8px;
+  }
+  .dateband span { color: #e8b64c; }
+
+  /* ---- lead row ---- */
+  .lead { display: flex; gap: 14px; }
+  .lead-main { width: 628px; flex: none; }
+  .kicker {
+    font-family: 'DejaVu Sans', Arial, sans-serif; font-size: 10px; font-weight: 700;
+    letter-spacing: 2px; text-transform: uppercase; color: #9c1f1f;
+  }
+  .lead-main h2 { font-size: 30px; line-height: 1.02; font-weight: 900; margin: 2px 0 4px; }
+  .lead-main .deck { font-size: 13px; line-height: 1.34; color: #2b271e; }
+  .lead-main .deck b { color: #17130c; }
+  .lead-side { width: 344px; flex: none; border-left: 1px solid #17130c; padding-left: 12px; }
+  .lead-side h3 { font-size: 18px; line-height: 1.08; font-weight: 900; margin: 2px 0 4px; }
+  .lead-side p { font-size: 11.5px; line-height: 1.32; color: #2b271e; }
+  .mapcap {
+    font-family: 'DejaVu Sans', Arial, sans-serif; font-size: 9px; line-height: 1.3;
+    color: #5a5344; margin-top: 2px;
+  }
+
+  /* ---- story rows ---- */
+  .row { display: flex; gap: 12px; }
+  .cell { flex: 1; border-top: 2px solid #17130c; padding-top: 4px; }
+  .cell h3 { font-size: 17px; line-height: 1.07; font-weight: 900; margin: 2px 0 3px; }
+  .cell p { font-size: 11px; line-height: 1.3; color: #2b271e; }
+  .cell .place {
+    font-family: 'DejaVu Sans', Arial, sans-serif; font-size: 9px; font-weight: 700;
+    letter-spacing: 1.5px; text-transform: uppercase; color: #9c1f1f;
+  }
+
+  /* ---- middle band: world map + weekend timeline ---- */
+  .mid { display: flex; gap: 14px; margin-top: 5px; }
+  .worldmap { width: 560px; flex: none; }
+  .worldmap h4, .clock h4 {
+    font-family: 'DejaVu Sans', Arial, sans-serif; font-size: 10px; font-weight: 700;
+    letter-spacing: 2px; text-transform: uppercase; margin-bottom: 3px;
+  }
+  .clock { flex: 1; border-left: 1px solid #17130c; padding-left: 12px; }
+  .clock .tick { font-size: 10.5px; line-height: 1.28; color: #2b271e; margin-bottom: 2px; }
+  .clock .tick b {
+    font-family: 'DejaVu Sans', Arial, sans-serif; font-size: 10px; color: #9c1f1f;
+  }
+
+  /* ---- briefs grid ---- */
+  .briefs-head {
+    font-family: 'DejaVu Sans', Arial, sans-serif; font-size: 10px; font-weight: 700;
+    letter-spacing: 2px; text-transform: uppercase; margin: 6px 0 3px;
+  }
+  .briefs { display: flex; gap: 14px; }
+  .bcol { width: 310px; flex: none; }
+  .bcol + .bcol { border-left: 1px solid #c9bfa5; padding-left: 13px; }
+  .brief { margin-bottom: 2px; font-size: 10px; line-height: 1.24; color: #2b271e; }
+  .brief b { color: #17130c; }
+
+  /* ---- bottom strip ---- */
+  .strip {
+    margin-top: 6px; background: #9c1f1f; color: #f8f3e6;
+    display: flex; gap: 16px; padding: 5px 10px;
+    font-family: 'DejaVu Sans', Arial, sans-serif; font-size: 10.5px; line-height: 1.3;
+  }
+  .strip div { flex: 1; }
+  .strip b { letter-spacing: 1px; }
+  .foot {
+    margin-top: 4px; text-align: center;
+    font-family: 'DejaVu Sans', Arial, sans-serif; font-size: 8.5px; color: #5a5344;
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <div class="mast">
+    <div class="mast-top"><span>One day &middot; one page</span><span>The world, Sunday</span><span>Checked against the day&rsquo;s reporting</span></div>
+    <h1>The Sunday <em>World</em></h1>
+    <div class="mast-sub"><b>Sunday 22 November 2026</b> &nbsp;&middot;&nbsp; 38 stories from every continent &nbsp;&middot;&nbsp; the Gulf, the climate talks, a cartel kingpin and a hacked FBI</div>
+  </div>
+
+  <div class="dateband">SUNDAY &middot; 22 NOVEMBER 2026 <span>&mdash; THE WORLD IN ONE PICTURE</span></div>
+
+  <section class="lead">
+    <div class="lead-main">
+      <div class="kicker">The Gulf &middot; Lead</div>
+      <h2>Iran readies a tanker fleet to break the blockade</h2>
+      <p class="deck">Tehran is massing <b>14 or more tankers at Kharg Island</b>, most with their
+      trackers switched off, as reports say a convoy is being readied to test the
+      <b>United States naval blockade</b>. Washington weighs new strikes after a week in
+      which Iran hit American bases in Kuwait and Bahrain and tankers burned in the
+      Strait of Hormuz. Oil through the strait has halved.</p>
+      <svg width="628" height="66" viewBox="0 0 628 66" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Map of the Gulf showing Kharg Island, the Strait of Hormuz, Kuwait and Bahrain">
+        <rect x="0" y="0" width="628" height="66" fill="#cfe0ea"/>
+        <path d="M0,0 H628 V14 L560,22 L480,12 L400,20 L320,10 L240,18 L160,10 L80,18 L0,12 Z" fill="#d8cba4" stroke="#8a7a52" stroke-width="1.5"/>
+        <path d="M400,66 L430,38 L500,32 L580,40 L628,34 L628,66 Z" fill="#c9b98f" stroke="#8a7a52" stroke-width="1.5"/>
+        <path d="M400,32 C440,30 470,28 500,32" fill="none" stroke="#5a5344" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <circle cx="300" cy="16" r="3.5" fill="#17130c"/><text x="196" y="12" font-size="10" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" fill="#17130c">KUWAIT &middot; ALI AL SALEM BASE</text>
+        <circle cx="400" cy="30" r="4" fill="#9c1f1f"/><text x="330" y="48" font-size="10" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" fill="#17130c">KHARG ISLAND &mdash; 14+ TANKERS</text>
+        <circle cx="500" cy="32" r="4" fill="#9c1f1f"/><text x="508" y="28" font-size="10" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" fill="#17130c">STRAIT OF HORMUZ</text>
+        <circle cx="540" cy="48" r="3.5" fill="#17130c"/><text x="470" y="62" font-size="10" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" fill="#17130c">BAHRAIN &middot; 5TH FLEET</text>
+        <text x="14" y="58" font-size="10" font-family="DejaVu Sans, Arial, sans-serif" font-style="italic" fill="#3b352b">THE GULF</text>
+      </svg>
+      <div class="mapcap">The strait carries a fifth of the world&rsquo;s traded oil. Flows through it fell to 8.5m barrels a day &mdash; half the pre-war level. Brent ended the week at $90.83.</div>
+    </div>
+    <div class="lead-side">
+      <div class="kicker">Climate &middot; Antalya</div>
+      <h3>Climate talks spill into Sunday with no deal</h3>
+      <p>Nearly 200 countries are deadlocked at <b>COP31</b> in Antalya over whether the
+      pact should call for a move away from fossil fuels. The Friday deadline passed
+      with no agreement; the latest draft never mentions them at all.</p>
+      <hr class="thin">
+      <div class="kicker">Markets</div>
+      <h3>Wall Street slides into correction</h3>
+      <p>The S&amp;P 500 ended its worst week since 2020 in correction, down 3.7%, as
+      fears over AI spending hit tech. The Nasdaq fell 5.3%; Nvidia fell 13.8% on
+      an SEC accounting probe report.</p>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section class="row">
+    <div class="cell">
+      <div class="place">Mexico &middot; Sinaloa</div>
+      <h3>&ldquo;El Chapo Isidro&rdquo; seized &mdash; Sinaloa erupts</h3>
+      <p>Mexican forces captured <b>Fausto Isidro Meza Flores</b>, an FBI top-ten fugitive,
+      in Guasave on Friday night; two lieutenants were held with him. Gun battles and
+      roadblocks followed across four towns. Mexico confirmed the arrest on Saturday.</p>
+    </div>
+    <div class="cell">
+      <div class="place">United States</div>
+      <h3>FBI probes hack of its crime database</h3>
+      <p>The FBI is investigating an apparent breach of the <b>National Crime Information
+      Center</b>, the database police across America use for warrants, fugitives and
+      criminal histories. It is the second FBI intrusion in months; the scope is unclear.</p>
+    </div>
+    <div class="cell">
+      <div class="place">Gaza</div>
+      <h3>Four more killed as the truce frays</h3>
+      <p>An Israeli drone hit a van carrying food to displaced families in Gaza City,
+      killing three; a man was shot dead in Jabalia. <b>1,671 people have been killed
+      since the October truce</b>, Gaza&rsquo;s Health Ministry said on Saturday.</p>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section class="row">
+    <div class="cell">
+      <div class="place">Baltic &middot; Gulf of Finland</div>
+      <h3>Drones hit a Russian ship; Finland on alert</h3>
+      <p>A Russian merchant vessel caught fire after it was likely hit by drones in the
+      Gulf of Finland and drifted toward Finnish waters. PM Orpo warned &ldquo;the war is
+      spreading to our immediate neighbourhood.&rdquo;</p>
+    </div>
+    <div class="cell">
+      <div class="place">Ukraine &middot; Kyiv</div>
+      <h3>Zelensky: bridge strikes a &ldquo;fair response&rdquo;</h3>
+      <p>President Zelensky defended Ukraine&rsquo;s strikes on the Crimean Bridge as
+      retaliation for 109 Russian attacks on Ukrainian bridges, as Britain&rsquo;s Wes
+      Streeting visited Kyiv. Russia&rsquo;s 400-drone barrage on Friday killed eight.</p>
+    </div>
+    <div class="cell">
+      <div class="place">Denmark &middot; Copenhagen</div>
+      <h3>Russia &lsquo;plotted to kill a rapper&rsquo;, Denmark says</h3>
+      <p>Danish intelligence says Russia&rsquo;s FSB planned to kill US-Ukrainian rapper
+      <b>Kyivstoner</b> at a September concert. Two men are charged; the Russian defence
+      attach&eacute; was expelled. Von der Leyen condemned it on Saturday.</p>
+    </div>
+  </section>
+
+  <section class="mid">
+    <div class="worldmap">
+      <h4>Ten places that made the day</h4>
+      <svg width="560" height="72" viewBox="0 0 560 72" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Simplified world map marking ten places from the day's news">
+        <rect x="0" y="0" width="560" height="92" fill="#dce8ef"/>
+        <path d="M28,18 L78,10 L96,26 L84,52 L58,66 L40,50 L26,34 Z" fill="#d8cba4" stroke="#8a7a52" stroke-width="1"/>
+        <path d="M104,58 L128,54 L136,74 L118,88 L104,76 Z" fill="#d8cba4" stroke="#8a7a52" stroke-width="1"/>
+        <path d="M238,12 L300,8 L318,24 L300,52 L262,58 L240,34 Z" fill="#d8cba4" stroke="#8a7a52" stroke-width="1"/>
+        <path d="M322,16 L392,10 L430,26 L420,56 L372,62 L336,44 Z" fill="#d8cba4" stroke="#8a7a52" stroke-width="1"/>
+        <path d="M436,30 L470,26 L478,44 L452,52 L438,42 Z" fill="#d8cba4" stroke="#8a7a52" stroke-width="1"/>
+        <path d="M500,64 L528,60 L534,76 L510,82 L498,72 Z" fill="#d8cba4" stroke="#8a7a52" stroke-width="1"/>
+        <circle cx="52" cy="58" r="3" fill="#9c1f1f"/><text x="8" y="80" font-size="8.5" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">LIMA</text>
+        <circle cx="66" cy="30" r="3" fill="#9c1f1f"/><text x="56" y="8" font-size="8.5" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">GUASAVE</text>
+        <circle cx="92" cy="22" r="3" fill="#9c1f1f"/><text x="98" y="16" font-size="8.5" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">WASHINGTON</text>
+        <circle cx="118" cy="66" r="3" fill="#9c1f1f"/><text x="104" y="88" font-size="8.5" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">BRAS&Iacute;LIA</text>
+        <circle cx="282" cy="26" r="3" fill="#9c1f1f"/><text x="252" y="8" font-size="8.5" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">COPENHAGEN</text>
+        <circle cx="296" cy="40" r="3" fill="#9c1f1f"/><text x="300" y="52" font-size="8.5" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">ANTALYA</text>
+        <circle cx="316" cy="22" r="3" fill="#9c1f1f"/><text x="318" y="12" font-size="8.5" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">KYIV</text>
+        <circle cx="330" cy="46" r="3" fill="#9c1f1f"/><text x="330" y="66" font-size="8.5" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">GAZA</text>
+        <circle cx="398" cy="40" r="3" fill="#9c1f1f"/><text x="396" y="66" font-size="8.5" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">KHARG</text>
+        <circle cx="462" cy="36" r="3" fill="#9c1f1f"/><text x="452" y="14" font-size="8.5" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">RANCHI</text>
+      </svg>
+    </div>
+    <div class="clock">
+      <h4>The weekend, in UTC</h4>
+      <div class="tick"><b>FRI 19:09</b> &mdash; Peru quake strikes Jun&iacute;n; felt in Lima</div>
+      <div class="tick"><b>SAT 00:12</b> &mdash; Magnitude 5.0 aftershock near Jun&iacute;n</div>
+      <div class="tick"><b>SAT</b> &mdash; Bolsonaro taken to ICU in Bras&iacute;lia</div>
+      <div class="tick"><b>SAT</b> &mdash; Mexico confirms El Chapo Isidro capture</div>
+      <div class="tick"><b>SUN 00:29</b> &mdash; COP31 talks spill into Sunday overtime</div>
+      <div class="tick"><b>SUN 01:36</b> &mdash; Iran tanker-fleet plan reported</div>
+    </div>
+  </section>
+
+  <div class="briefs-head">The rest of the day &mdash; 27 briefs</div>
+  <section class="briefs">
+    <div class="bcol">
+      <div class="brief"><b>Roundup:</b> a Missouri judge approves Bayer&rsquo;s $7.25bn settlement over weedkiller cancer claims, paid over 20 years.</div>
+      <div class="brief"><b>White House:</b> Trump orders federal contractors to clear responses to Congress with his office first.</div>
+      <div class="brief"><b>Palisades fire:</b> a jury convicts Jonathan Rinderknecht, 30, of starting the January 2025 blaze that killed 12.</div>
+      <div class="brief"><b>Geneva:</b> UN talks fail to deliver binding rules on autonomous weapons.</div>
+      <div class="brief"><b>Maths:</b> an Anthropic mathematician posts a ~15m-line Lean proof claiming the Riemann Hypothesis; experts urge caution.</div>
+      <div class="brief"><b>Paris:</b> a court jails three officers for the 2020 beating of music producer Michel Zecler.</div>
+      <div class="brief"><b>Estonia:</b> every road border crossing with Russia shut for six months after suspected arson attacks.</div>
+      <div class="brief"><b>NATO:</b> Rutte says the alliance is ready to defend every part of Polish territory.</div>
+      <div class="brief"><b>India:</b> Modi opens Nitish Setu, a &#8377;4,280-crore Ganga bridge in Bihar, and &#8377;34,470-crore of projects.</div>
+    </div>
+    <div class="bcol">
+      <div class="brief"><b>Cyclone Akvan:</b> 14 flights cancelled at Ranchi airport as the storm nears India&rsquo;s east coast.</div>
+      <div class="brief"><b>NSA:</b> the agency&rsquo;s secure network is offline for a third straight day.</div>
+      <div class="brief"><b>Sudan:</b> the Tasis Alliance seizes the strategic Bau area in Blue Nile state.</div>
+      <div class="brief"><b>Japan:</b> about 1,500 people are trapped by heavy snow in the Fukushima region.</div>
+      <div class="brief"><b>London:</b> King Charles thanks President Erdo&#287;an and T&uuml;rkiye for hosting COP31.</div>
+      <div class="brief"><b>Moscow:</b> Putin calls the city a &ldquo;Third Rome&rdquo; in an interview marking Patriarch Kirill&rsquo;s 80th birthday.</div>
+      <div class="brief"><b>The Hague:</b> the ICJ rules Myanmar committed genocide against the Rohingya &mdash; a first for a state.</div>
+      <div class="brief"><b>Iraq:</b> an oil-smuggling ring is uncovered in Najaf; a warrant is issued for a council member.</div>
+      <div class="brief"><b>Beijing:</b> China will not publicly agree to cut Iranian crude imports under a US sanctions ultimatum.</div>
+    </div>
+    <div class="bcol">
+      <div class="brief"><b>Cyber week:</b> a Microsoft outage hit hundreds of millions; a US air-travel halt disrupted 18,000+ flights.</div>
+      <div class="brief"><b>Shenzhen:</b> Xi, Trump and Putin issue a joint &ldquo;peace declaration&rdquo; after their trilateral at APEC.</div>
+      <div class="brief"><b>Bras&iacute;lia:</b> Bolsonaro is stable and conscious in intensive care; no discharge date is given.</div>
+      <div class="brief"><b>Peru toll:</b> a teenager is hurt in Lima and homes are damaged across five regions; a M5.0 aftershock follows.</div>
+      <div class="brief"><b>West Bank:</b> a Palestinian man, 42, is shot dead by settlement guards near Dura al-Qar.</div>
+      <div class="brief"><b>Shipping:</b> the US Maritime Administration warns of rising insurance premiums and shrinking tanker capacity.</div>
+      <div class="brief"><b>Oil:</b> Brent ends the week at $90.83; flows through Hormuz are half their pre-war level.</div>
+      <div class="brief"><b>Senate:</b> a war-powers bid on Iran fails 51&ndash;48.</div>
+      <div class="brief"><b>Kyiv toll:</b> six are killed in the capital and two in Lviv in Friday&rsquo;s barrage; 79 cruise missiles are shot down.</div>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div><b>A BOY, A LETTER, AND HUBBLE</b> &mdash; NASA answers an 11-year-old&rsquo;s plan to save the telescope: &ldquo;You have the mind of an engineer.&rdquo;</div>
+    <div><b>AI SPOTS TWO NEW WORLDS</b> &mdash; two possible planets found around a star 116 light-years away, in data searched by an AI.</div>
+    <div><b>CRICKET&rsquo;S CAPTAIN STAYS</b> &mdash; Pat Cummins wins unanimous support to remain Australia&rsquo;s Test captain.</div>
+  </div>
+
+  <div class="foot">The Sunday World &middot; Sunday 22 November 2026 &middot; Every fact checked against the day&rsquo;s reporting; where the reporting is dated, the page says so. Sources: Reuters, AP, BBC, CNN, NPR, DW.</div>
+</div>
+</body>
+</html>
